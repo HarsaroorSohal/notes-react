@@ -1,8 +1,19 @@
 body {
     background-image: url("../public/background.png");
     background-size: 50%;
+    padding: 20px 15%;
 }
 * {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
 }
+
+.footer {
+    text-align: right;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    height: 10px;
+    width: 100%;
+    text-decoration: none
+};

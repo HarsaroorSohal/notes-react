@@ -5,6 +5,8 @@ import {BiMessageSquareAdd} from 'react-icons/bi'
 import "./Note.css"
 
 const Note = (props) => {
+
+    
     const today = new Date().toISOString().slice(0,10)
     const [input,setInput] = useState('')
     const maxCharacterCount = 120
@@ -19,6 +21,7 @@ const Note = (props) => {
         setInput("")
         props.addNote(newNote)
     }
+
     const handleDeleteItem = () => {
         props.deleteNode(props.noteData.text)
     }
@@ -42,7 +45,7 @@ const Note = (props) => {
             {
                 !props.isEdit && 
                 <div className="note-footer">
-                    <small> {today} </small>
+                    <small> {props.noteData.date} </small>
                     <MdDeleteForever 
                     className="delete-icon"
                     onClick={handleDeleteItem}

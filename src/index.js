@@ -1,12 +1,19 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Notes from "./components/Notes/Notes"
+import NotesApp from "./App"
 import "./globalCSS.css"
+import store from "./store/store"
+import { Provider } from "react-redux"
+
 const rootElement = document.getElementById("root")
+
 const App = () => {
-    return (
-       
-        <Notes></Notes>
+     return (
+        <div>
+            <Provider store={store}>
+                <NotesApp></NotesApp>
+            </Provider>
+        </div>
     )
 }
 

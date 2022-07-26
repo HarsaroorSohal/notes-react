@@ -4,44 +4,9 @@ import Note from "../Note/Note"
 import Search from "../Search/Search"
 import "./Notes.css"
 
-const Notes = () => {
-    const [notes, setNotes] = useState([{text : "First Note" , date : "123"}]);
-
-    useEffect(() => {
-        const storageNotes = JSON.parse(
-            localStorage.getItem('notes-data')
-        )
-        if(storageNotes) {
-            setNotes(storageNotes)
-        }
-    },[])
-
-    useEffect(() => {
-        localStorage.setItem(
-            'notes-data',
-            JSON.stringify(notes)
-        )
-    },[notes])
-    
-    const addNote = (note) => {
-        const newNotes = [...notes, note]
-        setNotes(newNotes)
-    }
-
-    const deleteNote = (text) => {
-        const newNotes = notes.filter((note) =>  note.text != text)
-        setNotes(newNotes)
-    }
-
-    const SearchNotes = (search) => {
-        console.log("searching")
-        const newNotes = notes.filter((note) =>  note.text.includes(search))
-        setNotes(newNotes)
-    }
+const Notes = ({notes,addNote,deleteNote}) => {
     return (
         <div>
-            <div className="notes-header">Notes App</div>
-            <Search search={SearchNotes}></Search>
             <div className="notes-app"> 
                 {   
                     notes.map((note) => {

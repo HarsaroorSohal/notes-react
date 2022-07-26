@@ -2,11 +2,11 @@
     display: flex;
     justify-content: start;
     width: 99%;
-    margin-bottom: 15px;
+    margin: 30px 0px;
 }
 .search-icon {
     padding-right: 5px;
-    zoom: 1.7;
+    zoom: 1.8;
 }
 .search-input {
     background-color: rgb(233,233,233);

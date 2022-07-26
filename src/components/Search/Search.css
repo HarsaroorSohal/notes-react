@@ -1,0 +1,18 @@
+.search-bar {
+    display: flex;
+    justify-content: start;
+    width: 99%;
+    margin-bottom: 15px;
+}
+.search-icon {
+    padding-right: 5px;
+    zoom: 1.7;
+}
+.search-input {
+    background-color: rgb(233,233,233);
+    border-radius: 10px;
+    width: 100%;
+}
+.search-input:focus {
+    outline: none;
+}
